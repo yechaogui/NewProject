@@ -1,0 +1,137 @@
+struct NumBody
+        {
+            public int num;//数字
+            public int matchNum;//匹配的个数
+            public int matchSum;
+            public double matchRate;//匹配度
+            public System.Drawing.Point point;
+            public List<System.Drawing.Point> bodyCollectionPoint;//该数字所有像素在大图中的坐标
+        }
+#region 找字
+
+        /// <summary>
+        /// 找文字，镂空的图片文字
+        /// </summary>
+        /// <param name="subPic"></param>
+        /// <param name="parPic"></param>
+        /// <param name="searchRect"></param>
+        /// <param name="errorRange"></param>
+        /// <param name="matchRate"></param>
+        /// <param name="isFindAll"></param>
+        /// <returns></returns>
+        List<NumBody> FindText(string subPic, string parPic, System.Drawing.Rectangle searchRect, byte errorRange, double matchRate = 0.9, bool isFindAll = false)
+        {
+
+            List<NumBody> ListPoint = new List<NumBody>();
+            var subBitmap = new Bitmap(subPic);
+            var parBitmap = new Bitmap(parPic);
+            int subWidth = subBitmap.Width;
+            int subHeight = subBitmap.Height;
+            int parWidth = parBitmap.Width;
+            int parHeight = parBitmap.Height;
+            var bgColor = subBitmap.GetPixel(0, 0);//背景红色
+            if (searchRect.IsEmpty)
+            {
+                searchRect = new System.Drawing.Rectangle(0, 0, parBitmap.Width, parBitmap.Height);
+            }
+            var searchLeftTop = searchRect.Location;
+            var searchSize = searchRect.Size;
+            var subData = subBitmap.LockBits(new System.Drawing.Rectangle(0, 0, subBitmap.Width, subBitmap.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            var parData = parBitmap.LockBits(new System.Drawing.Rectangle(0, 0, parBitmap.Width, parBitmap.Height), ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            var byteArrarySub = new byte[subData.Stride * subData.Height];
+            var byteArraryPar = new byte[parData.Stride * parData.Height];
+            Marshal.Copy(subData.Scan0, byteArrarySub, 0, subData.Stride * subData.Height);
+            Marshal.Copy(parData.Scan0, byteArraryPar, 0, parData.Stride * parData.Height);
+            var iMax = searchLeftTop.Y + searchSize.Height - subData.Height;//行
+            var jMax = searchLeftTop.X + searchSize.Width - subData.Width;//列
+            System.Drawing.Color startPixelColor = System.Drawing.Color.FromArgb(0, 0, 0);
+            int smallOffsetX = 0, smallOffsetY = 0;
+            int smallStartX = 0, smallStartY = 0;
+            int pointX = -1; int pointY = -1;
+
+
+            for (int m = 0; m < subHeight; m++)
+            {
+                for (int n = 0; n < subWidth; n++)
+                {
+                    smallOffsetX = n;
+                    smallOffsetY = m;
+                    int subIndex = m * subWidth * 4 + n * 4;
+                    var color = System.Drawing.Color.FromArgb(byteArrarySub[subIndex + 3], byteArrarySub[subIndex + 2], byteArrarySub[subIndex + 1], byteArrarySub[subIndex]);
+                    if (!ColorAEqualColorB(color, bgColor, errorRange))
+                    {
+                        startPixelColor = color;
+                        goto END;
+                    }
+                }
+            }
+
+        END:
+            for (int i = searchLeftTop.Y; i < iMax; i++)
+            {
+                for (int j = searchLeftTop.X; j < jMax; j++)
+                {
+                    //大图x，y坐标处的颜色值
+                    int x = j, y = i;
+                    int parIndex = i * parWidth * 4 + j * 4;
+                    var colorBig = System.Drawing.Color.FromArgb(byteArraryPar[parIndex + 3], byteArraryPar[parIndex + 2], byteArraryPar[parIndex + 1], byteArraryPar[parIndex]);
+                    ;
+
+                    List<System.Drawing.Point> myListPoint = new List<System.Drawing.Point>();
+                    if (ColorAEqualColorB(colorBig, startPixelColor, errorRange))
+                    {
+                        smallStartX = x - smallOffsetX;//待找的图X坐标
+                        smallStartY = y - smallOffsetY;//待找的图Y坐标
+                        int sum = 0;//所有需要比对的有效点
+                        int matchNum = 0;//成功匹配的点
+                        for (int m = 0; m < subHeight; m++)
+                        {
+                            for (int n = 0; n < subWidth; n++)
+                            {
+                                int x1 = n, y1 = m;
+                                int subIndex = m * subWidth * 4 + n * 4;
+                                var color = System.Drawing.Color.FromArgb(byteArrarySub[subIndex + 3], byteArrarySub[subIndex + 2], byteArrarySub[subIndex + 1], byteArrarySub[subIndex]);
+                                if (color != bgColor)
+                                {
+                                    sum++;
+                                    int x2 = smallStartX + x1, y2 = smallStartY + y1;
+                                    int parReleativeIndex = y2 * parWidth * 4 + x2 * 4;//比对大图对应的像素点的颜色
+                                    var colorPixel = System.Drawing.Color.FromArgb(byteArraryPar[parReleativeIndex + 3], byteArraryPar[parReleativeIndex + 2], byteArraryPar[parReleativeIndex + 1], byteArraryPar[parReleativeIndex]);
+                                    if (ColorAEqualColorB(colorPixel, color, errorRange))
+                                    {
+                                        matchNum++;
+                                    }
+                                    myListPoint.Add(new System.Drawing.Point(x2, y2));
+                                }
+                            }
+                        }
+
+                        double rate = (double)matchNum / sum;
+                        if (rate>= matchRate)
+                        {
+                            Console.WriteLine((double)matchNum / sum);
+                            pointX = smallStartX + (int)(subWidth / 2.0);
+                            pointY = smallStartY + (int)(subHeight / 2.0);
+                            var point = new System.Drawing.Point(pointX, pointY);
+                            if (!ListTextBodyContainsPoint(ListPoint, point, 1))
+                            {
+                                ListPoint.Add(new NumBody() { point = point, matchNum = matchNum,matchSum=sum, matchRate = rate, bodyCollectionPoint = myListPoint });
+                            }
+                            SearchNumbersByMatchNum(ref ListPoint);
+                            if (!isFindAll)
+                            {
+                                goto FIND_END;
+                            }
+                        }
+                    }
+                    //小图x1,y1坐标处的颜色值
+                }
+            }
+        FIND_END:
+            subBitmap.UnlockBits(subData);
+            parBitmap.UnlockBits(parData);
+            subBitmap.Dispose();
+            parBitmap.Dispose();
+            GC.Collect();
+            return ListPoint;
+        }

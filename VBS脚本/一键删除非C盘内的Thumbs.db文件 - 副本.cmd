@@ -1,0 +1,1 @@
+FOR %%a IN ( M: N: ) DO DEL /f/s/q/a %%a\Thumbs.db

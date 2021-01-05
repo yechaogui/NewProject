@@ -1,0 +1,33 @@
+bool ColorAEqualColorB(System.Drawing.Color colorA, System.Drawing.Color colorB, byte errorRange = 10)
+        {
+            return colorA.A <= colorB.A + errorRange && colorA.A >= colorB.A - errorRange &&
+                colorA.R <= colorB.R + errorRange && colorA.R >= colorB.R - errorRange &&
+                colorA.G <= colorB.G + errorRange && colorA.G >= colorB.G - errorRange &&
+                colorA.B <= colorB.B + errorRange && colorA.B >= colorB.B - errorRange;
+          
+        }
+        bool ListContainsPoint(List<System.Drawing.Point> listPoint, System.Drawing.Point point, double errorRange = 10)
+        {
+            bool isExist = false;
+            foreach (var item in listPoint)
+            {
+                if (item.X <= point.X + errorRange && item.X >= point.X - errorRange && item.Y <= point.Y + errorRange && item.Y >= point.Y - errorRange)
+                {
+                    isExist = true;
+                }
+            }
+            return isExist;
+        }
+        bool ListTextBodyContainsPoint(List<NumBody> listPoint, System.Drawing.Point point, double errorRange = 10)
+        {
+            bool isExist = false;
+            foreach (var item in listPoint)
+            {
+
+                if (item.point.X <= point.X + errorRange && item.point.X >= point.X - errorRange && item.point.Y <= point.Y + errorRange && item.point.Y >= point.Y - errorRange)
+                {
+                    isExist = true;
+                }
+            }
+            return isExist;
+        }

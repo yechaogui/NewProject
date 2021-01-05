@@ -1,0 +1,97 @@
+#region 查找数字
+        
+        /// <summary>
+        /// 在指定区域里面查找数字
+        /// </summary>
+        /// <param name="numDic"></param>
+        /// <param name="parPic"></param>
+        /// <param name="searchRect"></param>
+        /// <param name="errorRange"></param>
+        /// <returns></returns>
+        int FindNumbers(Dictionary<int, string> numDic, string parPic, System.Drawing.Rectangle searchRect, byte errorRange=8, double matchRate = 0.9)
+        {
+            //同一个区域找到多个相同的图片
+            List<NumBody> ListBody = new List<NumBody>();
+            foreach (var item in numDic)
+            {
+                var listPoint = FindText(item.Value, parPic, searchRect, errorRange, matchRate, true);
+                foreach (var point in listPoint)
+                {
+                    ListBody.Add(new NumBody() { num = item.Key,matchNum=point.matchNum,matchSum=point.matchSum, matchRate=point.matchRate, point = point.point, bodyCollectionPoint = point.bodyCollectionPoint });
+                }
+            }
+
+            SearchNumbersByMatchNum(ref ListBody);
+            var myList = from body in ListBody orderby body.point.X ascending select body;
+            string number = "0";
+            foreach (var item in myList)
+            {
+                number += item.num;
+            }
+            int num = Int32.Parse(number);
+            return num;
+        }
+       /// <summary>
+       /// 搜索同一个数字的时候，出现重叠的地方，用匹配度去过滤掉匹配度低的
+       /// 比如同样是1，在控制匹配度允许下，一个（83,95）和（84,95）这两个点明显是同一个数字
+       /// 此时谁的匹配度低过滤掉谁
+       /// </summary>
+       /// <param name="ListBody"></param>
+        void SearchNumbersByMatchNum(ref List<NumBody> ListBody)
+        {
+            bool isValid = true;
+            for (int i = 0; i < ListBody.Count; i++)
+            {
+                var body = ListBody[i];
+                
+                for (int j = i; j < ListBody.Count; j++)
+                {
+
+                    var bodyX = ListBody[j];
+                    if (!bodyX.Equals(body))
+                    {
+                        int sameNum = 0;
+                        foreach (var item in body.bodyCollectionPoint)
+                        {
+                            if (bodyX.bodyCollectionPoint.Contains(item))
+                            {
+                                sameNum++;
+                            }
+                        }
+                        if (sameNum >= 1)//有1个以上点重合，表面图像重叠，删除像素点数少的图像
+                        {
+                            isValid = false;
+
+                            //如果某个数字100%匹配，那就不用比较了，这个数字肯定是对的
+                            double maxRate = 1;
+                            if (bodyX.matchRate >= maxRate)
+                            {
+                                ListBody.Remove(body);
+                            }
+                            else if (body.matchRate>=maxRate)
+                            {
+                                ListBody.Remove(bodyX);
+                            }
+                            else
+                            {
+                                if (bodyX.matchNum >= body.matchNum)//图像包含的所有像素个数
+                                {
+                                    ListBody.Remove(body);
+                                }
+                                else
+                                {
+                                    ListBody.Remove(bodyX);
+                                }
+                            }
+                            SearchNumbersByMatchNum(ref ListBody);
+                        }
+                    }
+                }
+            }
+            if (isValid)
+            {
+                return;
+            }
+        }
+
+        #endregion

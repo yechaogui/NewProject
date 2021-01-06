@@ -24,8 +24,8 @@ namespace Gui工具箱
 
         private void 文件夹同步助手ToolStripMenuItem1_Click(object sender, EventArgs e)//显示相应工具窗口
         {
-            文件夹同步助手.Form1 a = new 文件夹同步助手.Form1();
-            a.Show();
+            文件夹同步助手.Form1 文件夹同步助手 = new 文件夹同步助手.Form1();//创建对象
+            文件夹同步助手.Show();//显示对象
         }
     }
 }

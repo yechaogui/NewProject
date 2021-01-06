@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="文件夹同步助手, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\文件夹同步助手.dll</HintPath>
+      <HintPath>..\bin\Debug\文件夹同步助手.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

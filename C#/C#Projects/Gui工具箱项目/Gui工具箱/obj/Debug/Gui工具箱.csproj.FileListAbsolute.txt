@@ -21,3 +21,5 @@ E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\Gui工具箱\bi
 E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\Gui工具箱\bin\Debug\文件夹同步助手.pdb
 E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\Gui工具箱\bin\Debug\文件夹同步助手.dll.config
 E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\Gui工具箱\obj\Debug\Gui工具箱.Gui工具箱_Form.resources
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\Gui工具箱.exe
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\Gui工具箱.pdb

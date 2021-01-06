@@ -11,9 +11,9 @@ using 文件夹同步助手;
 
 namespace Gui工具箱
 {
-    public partial class Form1 : Form
+    public partial class Gui工具箱_Form : Form
     {
-        public Form1()
+        public Gui工具箱_Form()
         {
             InitializeComponent();
         }

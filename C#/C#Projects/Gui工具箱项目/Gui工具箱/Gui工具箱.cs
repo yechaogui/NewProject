@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using 文件夹同步助手;
+using 常用电脑路径;
 
 namespace Gui工具箱
 {
@@ -22,10 +23,16 @@ namespace Gui工具箱
             this.Close();
         }
 
-        private void 文件夹同步助手ToolStripMenuItem1_Click(object sender, EventArgs e)//显示相应工具窗口
+        private void 常用电脑路径_TSMt_Click(object sender, EventArgs e)
         {
-            文件夹同步助手.Form1 文件夹同步助手 = new 文件夹同步助手.Form1();//创建对象
-            文件夹同步助手.Show();//显示对象
+            常用电脑路径.常用电脑路径 常用电脑路径 = new 常用电脑路径.常用电脑路径();
+            常用电脑路径.Show();
+        }
+
+        private void 文件夹同步助手_TSMt_Click(object sender, EventArgs e)
+        {
+            文件夹同步助手.Form1 文件夹同步助手 = new 文件夹同步助手.Form1();
+            文件夹同步助手.Show();
         }
     }
 }

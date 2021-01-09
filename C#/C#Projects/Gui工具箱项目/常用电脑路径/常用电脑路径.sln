@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "常用电脑路径", "常用电脑路径.csproj", "{DAB07A5F-0CD5-46EB-8B3B-9240040F196C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAB07A5F-0CD5-46EB-8B3B-9240040F196C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB07A5F-0CD5-46EB-8B3B-9240040F196C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB07A5F-0CD5-46EB-8B3B-9240040F196C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB07A5F-0CD5-46EB-8B3B-9240040F196C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D10E9C75-E4D7-4C4F-8AE1-EDF685BA94AC}
+	EndGlobalSection
+EndGlobal

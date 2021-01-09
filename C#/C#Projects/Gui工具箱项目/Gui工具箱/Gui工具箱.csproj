@@ -79,6 +79,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\常用电脑路径\常用电脑路径.csproj">
+      <Project>{dab07a5f-0cd5-46eb-8b3b-9240040f196c}</Project>
+      <Name>常用电脑路径</Name>
+    </ProjectReference>
     <ProjectReference Include="..\文件夹同步助手\文件夹同步助手.csproj">
       <Project>{5c27f4e6-4fa8-43db-9dc9-0e5e84aee3b1}</Project>
       <Name>文件夹同步助手</Name>

@@ -8,14 +8,3 @@ E:\yechaogui\Desktop\计算机\程序\C#\C#Projects\文件夹同步助手\obj\De
 E:\yechaogui\Desktop\计算机\程序\C#\C#Projects\文件夹同步助手\obj\Debug\文件夹同步助手.csproj.CoreCompileInputs.cache
 E:\yechaogui\Desktop\计算机\程序\C#\C#Projects\文件夹同步助手\obj\Debug\文件夹同步助手.exe
 E:\yechaogui\Desktop\计算机\程序\C#\C#Projects\文件夹同步助手\obj\Debug\文件夹同步助手.pdb
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\文件夹同步助手.exe.config
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\文件夹同步助手.exe
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\文件夹同步助手.pdb
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.csproj.ResolveComReference.cache
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.Form1.resources
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.Properties.Resources.resources
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.csproj.GenerateResource.cache
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.csproj.CoreCompileInputs.cache
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.exe
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.pdb
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\文件夹同步助手\obj\Debug\文件夹同步助手.csprojAssemblyReference.cache

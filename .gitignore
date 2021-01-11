@@ -1,26 +1,30 @@
+ï»¿################################################################################
+# æ­¤ .gitignore æ–‡ä»¶å·²ç”± Microsoft(R) Visual Studio è‡ªåŠ¨åˆ›å»ºã€‚
+################################################################################
+
 ##ignore this file##
 
-##Ê¹ÓÃËµÃ÷##
-#      #              ´ËÎª×¢ÊÍ ¨C ½«±» Git ºöÂÔ
-#      *.a            # ºöÂÔËùÓÐ .a ½áÎ²µÄÎÄ¼þ
-#      !lib.a         # µ« lib.a ³ýÍâ
-#       /TODO     # ½ö½öºöÂÔÏîÄ¿¸ùÄ¿Â¼ÏÂµÄ TODO ÎÄ¼þ£¬²»°üÀ¨ subdir/TODO
-#      build/        # ºöÂÔ build/ Ä¿Â¼ÏÂµÄËùÓÐÎÄ¼þ
-#      doc/*.txt    # »áºöÂÔ doc/notes.txt µ«²»°üÀ¨ doc/server/arch.txt
-#      **/foo       # ºöÂÔ/foo, a/foo, a/b/fooµÈ
-#      a/**/b       # ºöÂÔa/b, a/x/b, a/x/y/bµÈ
-#      *.log         # ºöÂÔËùÓÐ .log ÎÄ¼þ
-#     config.php # ºöÂÔµ±Ç°Â·¾¶µÄ config.phpÎÄ¼þ
+##ä½¿ç”¨è¯´æ˜Ž##
+#      #              æ­¤ä¸ºæ³¨é‡Š â€“ å°†è¢« Git å¿½ç•¥
+#      *.a            # å¿½ç•¥æ‰€æœ‰ .a ç»“å°¾çš„æ–‡ä»¶
+#      !lib.a         # ä½† lib.a é™¤å¤–
+#       /TODO     # ä»…ä»…å¿½ç•¥é¡¹ç›®æ ¹ç›®å½•ä¸‹çš„ TODO æ–‡ä»¶ï¼Œä¸åŒ…æ‹¬ subdir/TODO
+#      build/        # å¿½ç•¥ build/ ç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶
+#      doc/*.txt    # ä¼šå¿½ç•¥ doc/notes.txt ä½†ä¸åŒ…æ‹¬ doc/server/arch.txt
+#      **/foo       # å¿½ç•¥/foo, a/foo, a/b/fooç­‰
+#      a/**/b       # å¿½ç•¥a/b, a/x/b, a/x/y/bç­‰
+#      *.log         # å¿½ç•¥æ‰€æœ‰ .log æ–‡ä»¶
+#     config.php # å¿½ç•¥å½“å‰è·¯å¾„çš„ config.phpæ–‡ä»¶
 
-##ÆäËûµÄÒ»Ð©¹ýÂËÌõ¼þ##
-#    * £¿£º´ú±íÈÎÒâµÄÒ»¸ö×Ö·û
-#    * £ª£º´ú±íÈÎÒâÊýÄ¿µÄ×Ö·û
-#    * {!ab}£º±ØÐë²»ÊÇ´ËÀàÐÍ
-#    * {ab,bb,cx}£º´ú±íab,bb,cxÖÐÈÎÒ»ÀàÐÍ¼´¿É
-#    * [abc]£º´ú±ía,b,cÖÐÈÎÒ»×Ö·û¼´¿É
-#    * [ ^abc]£º´ú±í±ØÐë²»ÊÇa,b,cÖÐÈÎÒ»×Ö·û
+##å…¶ä»–çš„ä¸€äº›è¿‡æ»¤æ¡ä»¶##
+#    * ï¼Ÿï¼šä»£è¡¨ä»»æ„çš„ä¸€ä¸ªå­—ç¬¦
+#    * ï¼Šï¼šä»£è¡¨ä»»æ„æ•°ç›®çš„å­—ç¬¦
+#    * {!ab}ï¼šå¿…é¡»ä¸æ˜¯æ­¤ç±»åž‹
+#    * {ab,bb,cx}ï¼šä»£è¡¨ab,bb,cxä¸­ä»»ä¸€ç±»åž‹å³å¯
+#    * [abc]ï¼šä»£è¡¨a,b,cä¸­ä»»ä¸€å­—ç¬¦å³å¯
+#    * [ ^abc]ï¼šä»£è¡¨å¿…é¡»ä¸æ˜¯a,b,cä¸­ä»»ä¸€å­—ç¬¦
 
-##C#ºöÂÔÉèÖÃ##
-**/.vs/
-**/obj/
-**/.get/
+##C#å¿½ç•¥è®¾ç½®##
+**/.vs
+**/obj
+**/.get

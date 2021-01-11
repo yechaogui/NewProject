@@ -1,6 +1,0 @@
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\bin\Debug\FunctionClassLibrary.dll
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\bin\Debug\FunctionClassLibrary.pdb
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\obj\Debug\FunctionClassLibrary.csprojAssemblyReference.cache
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\obj\Debug\FunctionClassLibrary.csproj.CoreCompileInputs.cache
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\obj\Debug\FunctionClassLibrary.dll
-E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\FunctionClassLibrary\obj\Debug\FunctionClassLibrary.pdb

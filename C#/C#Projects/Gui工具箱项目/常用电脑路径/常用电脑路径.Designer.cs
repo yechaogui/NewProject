@@ -82,7 +82,7 @@
             this.OpenPath_cB2.Name = "OpenPath_cB2";
             this.OpenPath_cB2.Size = new System.Drawing.Size(72, 16);
             this.OpenPath_cB2.TabIndex = 23;
-            this.OpenPath_cB2.Text = "软件安装";
+            this.OpenPath_cB2.Text = "临时路径";
             this.OpenPath_cB2.UseVisualStyleBackColor = true;
             // 
             // OpenPath_cB1
@@ -90,9 +90,9 @@
             this.OpenPath_cB1.AutoSize = true;
             this.OpenPath_cB1.Location = new System.Drawing.Point(6, 28);
             this.OpenPath_cB1.Name = "OpenPath_cB1";
-            this.OpenPath_cB1.Size = new System.Drawing.Size(60, 16);
+            this.OpenPath_cB1.Size = new System.Drawing.Size(72, 16);
             this.OpenPath_cB1.TabIndex = 21;
-            this.OpenPath_cB1.Text = "系统盘";
+            this.OpenPath_cB1.Text = "临时路径";
             this.OpenPath_cB1.UseVisualStyleBackColor = true;
             // 
             // OpenPath_tB3
@@ -122,7 +122,7 @@
             this.OpenPath_cB3.Name = "OpenPath_cB3";
             this.OpenPath_cB3.Size = new System.Drawing.Size(72, 16);
             this.OpenPath_cB3.TabIndex = 25;
-            this.OpenPath_cB3.Text = "软件安装";
+            this.OpenPath_cB3.Text = "临时路径";
             this.OpenPath_cB3.UseVisualStyleBackColor = true;
             // 
             // OpenPath_tB4
@@ -141,7 +141,7 @@
             this.OpenPath_cB4.Name = "OpenPath_cB4";
             this.OpenPath_cB4.Size = new System.Drawing.Size(72, 16);
             this.OpenPath_cB4.TabIndex = 27;
-            this.OpenPath_cB4.Text = "软件安装";
+            this.OpenPath_cB4.Text = "临时路径";
             this.OpenPath_cB4.UseVisualStyleBackColor = true;
             // 
             // OpenPath_tB5
@@ -160,7 +160,7 @@
             this.OpenPath_cB5.Name = "OpenPath_cB5";
             this.OpenPath_cB5.Size = new System.Drawing.Size(72, 16);
             this.OpenPath_cB5.TabIndex = 29;
-            this.OpenPath_cB5.Text = "软件安装";
+            this.OpenPath_cB5.Text = "临时路径";
             this.OpenPath_cB5.UseVisualStyleBackColor = true;
             // 
             // OpenPath_tB6

@@ -1,0 +1,13 @@
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\常用电脑路径.exe.config
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\常用电脑路径.exe
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\bin\Debug\常用电脑路径.pdb
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.csprojAssemblyReference.cache
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.系统常用.resources
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.常用电脑路径.resources
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.Properties.Resources.resources
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.软件常用.resources
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.csproj.GenerateResource.cache
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.csproj.CoreCompileInputs.cache
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.csproj.CopyComplete
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.exe
+E:\yechaogui\Desktop\NewProject\C#\C#Projects\Gui工具箱项目\常用电脑路径\obj\Debug\常用电脑路径.pdb

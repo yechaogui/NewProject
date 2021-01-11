@@ -78,6 +78,7 @@
             this.hosts_bt.TabIndex = 11;
             this.hosts_bt.Text = "hosts";
             this.hosts_bt.UseVisualStyleBackColor = true;
+            this.hosts_bt.Click += new System.EventHandler(this.hosts_bt_Click);
             // 
             // Startup_tB
             // 
@@ -96,6 +97,7 @@
             this.Startup_bt.TabIndex = 8;
             this.Startup_bt.Text = "启动";
             this.Startup_bt.UseVisualStyleBackColor = true;
+            this.Startup_bt.Click += new System.EventHandler(this.Startup_bt_Click);
             // 
             // Programs_tB
             // 
@@ -114,6 +116,7 @@
             this.Programs_bt.TabIndex = 6;
             this.Programs_bt.Text = "程序";
             this.Programs_bt.UseVisualStyleBackColor = true;
+            this.Programs_bt.Click += new System.EventHandler(this.Programs_bt_Click);
             // 
             // StartMenu_tB
             // 
@@ -132,6 +135,7 @@
             this.StartMenu_bt.TabIndex = 4;
             this.StartMenu_bt.Text = "开始菜单";
             this.StartMenu_bt.UseVisualStyleBackColor = true;
+            this.StartMenu_bt.Click += new System.EventHandler(this.StartMenu_bt_Click);
             // 
             // Fonts_tB
             // 

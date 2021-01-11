@@ -54,10 +54,10 @@
             this.Software_gB.Controls.Add(this.Adobe_bt);
             this.Software_gB.Location = new System.Drawing.Point(12, 12);
             this.Software_gB.Name = "Software_gB";
-            this.Software_gB.Size = new System.Drawing.Size(546, 301);
+            this.Software_gB.Size = new System.Drawing.Size(546, 426);
             this.Software_gB.TabIndex = 15;
             this.Software_gB.TabStop = false;
-            this.Software_gB.Text = "软件常用";
+            this.Software_gB.Text = "常用软件";
             // 
             // Adobe_cB4
             // 

@@ -32,6 +32,8 @@ namespace 常用电脑路径
             {
                 if (Directory.Exists(Adobe))
                     System.Diagnostics.Process.Start(Adobe);
+                else if (Adobe == "")//忽略空路径
+                    continue;
                 else
                 {
                     DialogResult dialogResult = MessageBox.Show("当前路径" + Adobe + "不存在!", "错误", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);

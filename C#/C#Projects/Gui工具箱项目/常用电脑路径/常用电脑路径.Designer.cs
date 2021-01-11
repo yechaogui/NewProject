@@ -50,11 +50,13 @@
             this.OpenPath_tB10 = new System.Windows.Forms.TextBox();
             this.OpenPath_cB10 = new System.Windows.Forms.CheckBox();
             this.OpenPath_gB = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.常用电脑路径_mS = new System.Windows.Forms.MenuStrip();
             this.系统常用_TSMt = new System.Windows.Forms.ToolStripMenuItem();
             this.软件常用_TSMt = new System.Windows.Forms.ToolStripMenuItem();
+            this.Note_tB = new System.Windows.Forms.TextBox();
+            this.Note_lb = new System.Windows.Forms.Label();
             this.OpenPath_gB.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.常用电脑路径_mS.SuspendLayout();
             this.SuspendLayout();
             // 
             // OpenPath_tB2
@@ -283,16 +285,16 @@
             this.OpenPath_gB.TabStop = false;
             this.OpenPath_gB.Text = "打开路径";
             // 
-            // menuStrip1
+            // 常用电脑路径_mS
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.常用电脑路径_mS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.系统常用_TSMt,
             this.软件常用_TSMt});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(584, 25);
-            this.menuStrip1.TabIndex = 43;
-            this.menuStrip1.Text = "menuStrip1";
+            this.常用电脑路径_mS.Location = new System.Drawing.Point(0, 0);
+            this.常用电脑路径_mS.Name = "常用电脑路径_mS";
+            this.常用电脑路径_mS.Size = new System.Drawing.Size(584, 25);
+            this.常用电脑路径_mS.TabIndex = 43;
+            this.常用电脑路径_mS.Text = "常用电脑路径_mS";
             // 
             // 系统常用_TSMt
             // 
@@ -308,22 +310,41 @@
             this.软件常用_TSMt.Text = "软件常用";
             this.软件常用_TSMt.Click += new System.EventHandler(this.软件常用_TSMt_Click);
             // 
+            // Note_tB
+            // 
+            this.Note_tB.Location = new System.Drawing.Point(12, 349);
+            this.Note_tB.Multiline = true;
+            this.Note_tB.Name = "Note_tB";
+            this.Note_tB.Size = new System.Drawing.Size(546, 100);
+            this.Note_tB.TabIndex = 44;
+            // 
+            // Note_lb
+            // 
+            this.Note_lb.AutoSize = true;
+            this.Note_lb.Location = new System.Drawing.Point(14, 332);
+            this.Note_lb.Name = "Note_lb";
+            this.Note_lb.Size = new System.Drawing.Size(65, 12);
+            this.Note_lb.TabIndex = 45;
+            this.Note_lb.Text = "路径笔记区";
+            // 
             // 常用电脑路径
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(584, 518);
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.Note_lb);
+            this.Controls.Add(this.Note_tB);
             this.Controls.Add(this.OpenPath_gB);
-            this.Controls.Add(this.menuStrip1);
-            this.MinimumSize = new System.Drawing.Size(600, 350);
+            this.Controls.Add(this.常用电脑路径_mS);
+            this.MaximumSize = new System.Drawing.Size(600, 500);
+            this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "常用电脑路径";
             this.Text = "常用电脑路径";
             this.OpenPath_gB.ResumeLayout(false);
             this.OpenPath_gB.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.常用电脑路径_mS.ResumeLayout(false);
+            this.常用电脑路径_mS.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,9 +373,11 @@
         private System.Windows.Forms.TextBox OpenPath_tB10;
         private System.Windows.Forms.CheckBox OpenPath_cB10;
         private System.Windows.Forms.GroupBox OpenPath_gB;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip 常用电脑路径_mS;
         private System.Windows.Forms.ToolStripMenuItem 系统常用_TSMt;
         private System.Windows.Forms.ToolStripMenuItem 软件常用_TSMt;
+        private System.Windows.Forms.TextBox Note_tB;
+        private System.Windows.Forms.Label Note_lb;
     }
 }
 

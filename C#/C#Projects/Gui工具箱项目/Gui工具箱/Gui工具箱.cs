@@ -34,5 +34,10 @@ namespace Gui工具箱
             文件夹同步助手.Form1 文件夹同步助手 = new 文件夹同步助手.Form1();
             文件夹同步助手.Show();
         }
+
+        private void 注册表修改工具_TSMt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{82C7C473-BA52-4F27-BE89-7ED528C8AF28}</ProjectGuid>
+    <ProjectGuid>{E5BC0A45-E246-4838-88F1-28AEE9EB98C3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Gui工具箱</RootNamespace>
-    <AssemblyName>Gui工具箱</AssemblyName>
+    <RootNamespace>注册表修改工具</RootNamespace>
+    <AssemblyName>注册表修改工具</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\bin\Debug\</OutputPath>
+    <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,9 +30,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,17 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gui工具箱.cs">
+    <Compile Include="注册表修改工具.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui工具箱.Designer.cs">
-      <DependentUpon>Gui工具箱.cs</DependentUpon>
+    <Compile Include="注册表修改工具.Designer.cs">
+      <DependentUpon>注册表修改工具.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gui工具箱.resx">
-      <DependentUpon>Gui工具箱.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -68,6 +62,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="注册表修改工具.resx">
+      <DependentUpon>注册表修改工具.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,22 +76,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FunctionClassLibrary\FunctionClassLibrary.csproj">
-      <Project>{76f3bf8a-f4dd-43b8-8a43-f8fd54cf83e8}</Project>
-      <Name>FunctionClassLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\常用电脑路径\常用电脑路径.csproj">
-      <Project>{dab07a5f-0cd5-46eb-8b3b-9240040f196c}</Project>
-      <Name>常用电脑路径</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\文件夹同步助手\文件夹同步助手.csproj">
-      <Project>{5c27f4e6-4fa8-43db-9dc9-0e5e84aee3b1}</Project>
-      <Name>文件夹同步助手</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\注册表修改工具\注册表修改工具.csproj">
-      <Project>{e5bc0a45-e246-4838-88f1-28aee9eb98c3}</Project>
-      <Name>注册表修改工具</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

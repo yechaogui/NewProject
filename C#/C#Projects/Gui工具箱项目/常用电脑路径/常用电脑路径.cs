@@ -63,6 +63,9 @@ namespace 常用电脑路径
             {
                 if (Directory.Exists(OpenPath))
                     System.Diagnostics.Process.Start(OpenPath);
+                else if (OpenPath == "")//忽略空路径
+                    //MessageBox.Show(Error_Path, "路径为空！", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    continue;
                 else
                 {
                     DialogResult dialogResult = MessageBox.Show("当前路径" + OpenPath + "不存在!", "错误", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);

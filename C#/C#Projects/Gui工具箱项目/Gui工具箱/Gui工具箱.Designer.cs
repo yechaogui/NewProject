@@ -36,6 +36,7 @@
             this.常用电脑路径_TSMt = new System.Windows.Forms.ToolStripMenuItem();
             this.清除修复_TSMt = new System.Windows.Forms.ToolStripMenuItem();
             this.退出_QTSMt = new System.Windows.Forms.ToolStripMenuItem();
+            this.注册表修改工具_TSMt = new System.Windows.Forms.ToolStripMenuItem();
             this.Gui工具箱_menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +90,8 @@
             // 
             // 清除修复_TSMt
             // 
+            this.清除修复_TSMt.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.注册表修改工具_TSMt});
             this.清除修复_TSMt.Name = "清除修复_TSMt";
             this.清除修复_TSMt.Size = new System.Drawing.Size(84, 21);
             this.清除修复_TSMt.Text = "清除修复(&X)";
@@ -101,6 +104,13 @@
             this.退出_QTSMt.Size = new System.Drawing.Size(62, 21);
             this.退出_QTSMt.Text = "退出(&Q)";
             this.退出_QTSMt.Click += new System.EventHandler(this.退出QToolStripMenuItem1_Click);
+            // 
+            // 注册表修改工具_TSMt
+            // 
+            this.注册表修改工具_TSMt.Name = "注册表修改工具_TSMt";
+            this.注册表修改工具_TSMt.Size = new System.Drawing.Size(180, 22);
+            this.注册表修改工具_TSMt.Text = "注册表修改工具";
+            this.注册表修改工具_TSMt.Click += new System.EventHandler(this.注册表修改工具_TSMt_Click);
             // 
             // Gui工具箱_Form
             // 
@@ -130,6 +140,7 @@
         private System.Windows.Forms.ToolStripMenuItem 常用电脑路径_TSMt;
         private System.Windows.Forms.ToolStripMenuItem 清除修复_TSMt;
         private System.Windows.Forms.ToolStripMenuItem 退出_QTSMt;
+        private System.Windows.Forms.ToolStripMenuItem 注册表修改工具_TSMt;
     }
 }
 
